@@ -1,0 +1,96 @@
+body {
+    background-color: #A56E6E;
+    margin: 0;
+}
+
+.section-1, .section-2, .section-3, .section-4, .section-5 {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    position: relative;
+    max-width: 100%;
+    height: auto;
+}
+
+.first, .second {
+    width: 100%;
+    height: auto;
+}
+
+.snow, .wind {
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+}
+
+.snow {
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.section-1:hover .snow {
+    animation: fadeIn 2s forwards;
+    opacity: 1;
+}
+
+.wind {
+    top: 0;
+    left: 0;
+    z-index: 3;
+    opacity: 0;
+    animation: fadeInOut 6s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.section-3{
+    position: relative;
+}
+
+.garland {
+    width: 100%;
+    height: auto;
+}
+
+.garland-2 {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    animation: fadeInOut 2s infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+.section-5:hover .snow {
+    animation: fadeIn 2s forwards;
+    opacity: 1;
+}
